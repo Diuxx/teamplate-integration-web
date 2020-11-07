@@ -1,3 +1,7 @@
+@import url("animations.css");
+
+/* responsive */
+@import "style-768.css" screen and (max-width: 768px);
 
 @font-face {
     font-family: Roboto;
@@ -28,4 +32,7 @@ body {
     background-image: url("src/skill-development.svg");
     background-size: 128px 128px;
     align-self: center;
+    /* animation */
+    animation: flip 8s infinite;
+    transform-origin: 56px 71px; /* change div origin */
 }
