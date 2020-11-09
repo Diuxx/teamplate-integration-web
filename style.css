@@ -13,6 +13,16 @@ body {
     font-family: Roboto, 'Open Sans', Arial, sans-serif;
 }
 
+.foot {
+    position: fixed;
+    width: 100vw;
+    min-height: 20px;
+    background-color: #F7F9FA;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .main {
     display: flex;
     justify-content: center;
