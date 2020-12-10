@@ -26,7 +26,8 @@ body {
 .main {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
     height: 100vh;
 }
 
@@ -35,14 +36,31 @@ body {
     align-self: center;
 }
 
-.logo {
-    display: block;
-    width: 128px;
-    height: 128px;
-    background-image: url("src/skill-development.svg");
-    background-size: 128px 128px;
-    align-self: center;
-    /* animation */
-    animation: flip 8s infinite;
-    transform-origin: 56px 71px; /* change div origin */
+.img {
+    width: fit-content;
+    height: fit-content;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img .title {
+    text-align: center;
+    padding: 5px;
+    color: #5DADE2;
+    font-weight: bold;
+}
+
+.img .desc {
+    font-weight: 300;
+    color: #808B96;
+    padding: 5px;
+    border: 1px solid #808B96;
+    border-radius: 20px;
+    background-color:white;
+}
+
+.hover .desc {
+    color: white;
+    background-color: #808B96;
 }
