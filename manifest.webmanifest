@@ -1,5 +1,15 @@
 {
+    "short_name": "Galerie Progressive Web Apps",
     "name": "Galerie PWA",
+    "lang": "fr",
+    "description": "ceci est une description..",
+    "start_url": "https://optimistic-bhabha-512d45.netlify.app/",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "dir": "ltr",
+    "display": "standalone",
+    "orientation": "any",
+    "prefer_related_applications": "true",
     "icons": [
         {
             "src": "src/icon-192x192.png",

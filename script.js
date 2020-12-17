@@ -1,17 +1,6 @@
 $(function () {
-    
-    if('serviceWorker'in navigator) 
-    {
-        navigator.serviceWorker.register("/sw.js")
-        .then((reg) => {
-            console.log("votre service worker a été enregistré!");
-        }).catch((error) => {
-            console.error(error);
-        });
-    } else {
-        console.warn("Service workers are not supported.");
-    }
-
+    // --
+    registerServiceWorker();
     fetchPictures('src/images.json');
     let main = $('.main');
 
@@ -56,6 +45,23 @@ $(function () {
         .catch((error) => {
             console.error('Error:', error);
         });
+    }
+
+    /**
+     * register sw
+     */
+    function registerServiceWorker() {
+        if('serviceWorker'in navigator) 
+        {
+            navigator.serviceWorker.register("/sw.js")
+            .then((reg) => {
+                console.log("votre service worker a été enregistré!");
+            }).catch((error) => {
+                console.error(error);
+            });
+        } else {
+            console.warn("Service workers are not supported.");
+        }
     }
 
 });
