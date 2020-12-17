@@ -42,7 +42,8 @@ $(function () {
      */
     function showPictures(data) {
         
-        console.log(pics) ;
+        console.log(data) ;
+        console.log(data.picture) ;
         let pictures = data.pictures ;
 
         pictures.forEach(img => {
