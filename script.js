@@ -40,9 +40,12 @@ $(function () {
      * display all pics
      * @param {*} pics 
      */
-    function showPictures(pics) {
+    function showPictures(data) {
+        
         console.log(pics) ;
-        pics.forEach(img => {
+        let pictures = data.pictures ;
+
+        pictures.forEach(img => {
             console.log(img) ;
             main.append(`
                 <div class="img">
