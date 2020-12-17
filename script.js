@@ -1,12 +1,20 @@
 $(function () {
 
+    fetch('src/images.json')
+    .then(response => response.json())
+    .then(data => showPictures(data))
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+
     // image list
     let imgs = [
-        { src: 'src/oldmanpipebooze.svg', title: 'Old man pipe', desc: 'wonderful' },
-        { src: 'src/secretAgent.svg', title: 'Secret agent', desc: 'beauty' },
-        { src: 'src/Vintage-Travel-Poster-Colorado-USA.svg', title: 'Travel poster Colorado', desc: 'nice' },
-        { src: 'src/Vintage-Travel-Poster-National-Parks-America-USA.svg', title: 'Travel poster National Parks', desc: 'gorgeous' },
-        { src: 'src/We-Can-Do-It-Rosie-The-Riveter-Poster.svg', title: 'We Can Do It', desc: 'sumptuous' },
+        { src: 'src/hands-423794_640.jpg', title: 'Old man pipe', desc: 'wonderful' },
+        { src: 'src/noel-1897317_640.jpg', title: 'Secret agent', desc: 'beauty' },
+        { src: 'src/tea-783352_640.jpg', title: 'Travel poster Colorado', desc: 'nice' },
+        { src: 'src/still-life-851328_640.jpg', title: 'Travel poster National Parks', desc: 'gorgeous' },
+        { src: 'src/wood-cube-473703_640.jpg', title: 'We Can Do It', desc: 'sumptuous' },
     ];
 
     let main = $('.main');
@@ -31,5 +39,10 @@ $(function () {
             $( this ).removeClass('hover');
         }
     );
+
+
+    function showPictures(pics) {
+        console.log(pics) ;
+    }
 
 });
