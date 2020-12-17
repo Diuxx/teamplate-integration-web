@@ -9,7 +9,7 @@
     "dir": "ltr",
     "display": "standalone",
     "orientation": "any",
-    "prefer_related_applications": "true",
+    "prefer_related_applications": false,
     "icons": [
         {
             "src": "src/icon-192x192.png",
