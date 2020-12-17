@@ -1,11 +1,6 @@
 $(function () {
 
-    fetch('src/images.json')
-    .then(response => response.json())
-    .then(data => showPictures(data))
-    .catch((error) => {
-        console.error('Error:', error);
-    });
+    fetchPictures('src/images.json');
 
 
     // image list
@@ -20,7 +15,7 @@ $(function () {
     let main = $('.main');
 
     // display them all
-    imgs.forEach(img => {
+    /*imgs.forEach(img => {
         main.append(`
             <div class="img">
                 <img src="` + img.src + `" alt="` + img.title + `" width="200">
@@ -28,7 +23,7 @@ $(function () {
                 <div class="desc">` + img.desc + `</div>
             </div>
         `);
-    });
+    });*/
 
     // trigger onhover img
     $('.img').hover(
@@ -41,8 +36,35 @@ $(function () {
     );
 
 
+    /**
+     * display all pics
+     * @param {*} pics 
+     */
     function showPictures(pics) {
         console.log(pics) ;
+        pics.forEach(img => {
+            console.log(img) ;
+            main.append(`
+                <div class="img">
+                    <img src="` + img.src + `" alt="` + img.title + `" width="200">
+                    <div class="title">` + img.title + `</div>
+                    <div class="desc">` + img.desc + `</div>
+                </div>
+            `);
+        });
+    }
+
+    /**
+     * fetch pics data
+     * @param {*} addr 
+     */
+    function fetchPictures(addr) {
+        fetch(addr)
+        .then(response => response.json())
+        .then(data => showPictures(data))
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
 });
