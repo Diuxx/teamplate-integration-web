@@ -1,6 +1,7 @@
 $(function () {
-    // --
+    // --       
     registerServiceWorker();
+    
     fetchPictures('src/images.json');
     let main = $('.main');
 
@@ -19,8 +20,6 @@ $(function () {
      * @param {*} pics 
      */
     function showPictures(data) {
-        
-        console.log(data) ;
         let pictures = data.pictures ;
 
         pictures.forEach(img => {

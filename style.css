@@ -64,3 +64,11 @@ body {
     color: white;
     background-color: #808B96;
 }
+
+.info {
+    width: 100%;
+    background-color: #808B96;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
